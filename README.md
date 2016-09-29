@@ -6,6 +6,7 @@
 * Project folder(s) should be at the top level in a repository (no need for a \src folder)
 * No spaces in project names (to keep VSTS url simple)
 * Segregate tests in a separate folder (\tests)
+* Prefer NuGet references to direct project references
 
 ## Source Control
 * Use [Pandora-Jewelry](https://pandora-jewelry.visualstudio.com/) VSTS (instead of PJNA)
@@ -44,6 +45,10 @@ instead of
         statement(s)
     }
 ```
+Exception for auto implemented properties: 
+```
+    public string MyLittleProperty { get; set; }
+```
 * [Productivity Power Tools](https://visualstudiogallery.msdn.microsoft.com/34ebc6a2-2777-421d-8914-e29c1dfa7f5d) extension will show matching vertical lines
 * [Viasfora](https://visualstudiogallery.msdn.microsoft.com/19609469-380e-4fcf-bcde-e31caeb658b2) extension will enable rainbow braces
 
@@ -63,7 +68,7 @@ instead of
 * Local variables
 * Private member variables (also prefix with underscore)
 
-http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/
+[Reference](http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/)
 
 ## Code file conventions:
 * One class per file
@@ -92,7 +97,11 @@ Use **nameof()** whenever possible
   * Authentication (login)
     * Azure AD?
     * SSO?
+    * OAuth?
   * Authorization (roles)
+    * Claims based?
+  * Do not check in username/password in config file (or XML transform file)
+    * Set in Azure application settings (what about KeyVault?)
 * URLs (DNS)
 * Certificates
 * Force HTTPS on all routes (except login pages)
@@ -125,9 +134,18 @@ I |	ISP | [Interface segregation principle](https://en.wikipedia.org/wiki/Inter
 D |	DIP | [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle) | one should “Depend upon Abstractions. Do not depend upon concretions.”
 
 Use properties instead of public/protected member variables
+```
+    public string MyLittleProperty { get; set; }
+```
+instead of
+```
+    public string MyLittleProperty;
+```
 
 ## Packages
-* Use StructureMap as a dependency injection container
-* Use AutoMapper to decouple type conversions and minimize constructor parameters (will not need a constructor parameter for every property)
+* Use [StructureMap](https://www.nuget.org/packages/StructureMap/) as a dependency injection container
+* Use [AutoMapper](https://www.nuget.org/packages/AutoMapper/) to decouple type conversions and minimize constructor parameters (will not need a constructor parameter for every property)
+* Use [Entity Framework](https://www.nuget.org/packages/EntityFramework/) as an ORM
+  * When should we switch to EF Core?
 
 Audit columns on all database tables
