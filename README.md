@@ -15,20 +15,22 @@
 # C# Coding Standards
 
 ## Tabs vs spaces:
-* 4 (or 2?) spaces
-* Don’t use tabs
+* 4 (or 2?) spaces (don’t use tabs)
 
 ## Where to put the curly brace?
 * Always enclose blocks in curly braces (avoids scope confusion)
 * Put the opening brace on a new line ([Allman style](https://en.wikipedia.org/wiki/Indent_style#Allman_style))
-* Productivity Power Tools extension will show vertical lines
-* Viasfora extension will enable rainbow braces
+* [Productivity Power Tools](https://visualstudiogallery.msdn.microsoft.com/34ebc6a2-2777-421d-8914-e29c1dfa7f5d) extension will show vertical lines
+* [Viasfora](https://visualstudiogallery.msdn.microsoft.com/19609469-380e-4fcf-bcde-e31caeb658b2) extension will enable rainbow braces
 
 ## [Pascal casing](https://en.wikipedia.org/wiki/PascalCase)
 * Class names
 * Method names
 * Properties (do not prefix with "Get" or "Set")
 * Interface names (after initial "I")
+```
+    IThisIsVeryUseful instead of IthisIsVeryUseful  
+```
 * Public member variables
 * Namespaces (separate logical components with periods)
 
@@ -36,6 +38,24 @@
 * Parameters
 * Local variables
 * Private member variables (also prefix with underscore)
+
+http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/
+
+## Max file size
+* One class per file
+* Exceptions:
+  * Enums
+
+## Methods/functions:
+* Goal of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) <= 10
+* Single responsibility - a method/function should only do one thing
+* Max # of arguments to method (dependency injection?)
+
+Avoid using **this** in code unless it's necessary
+
+**private** modifier is no longer needed on fields/methods
+
+Use **nameof()** whenever possible
 
 # Application Standards
 
@@ -58,18 +78,6 @@
 * Easier to refactor
 * Compile time checking
 * Gives you IntelliSense
-
-http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/
-
-## Max file size
-* One class per file
-* Exceptions:
-  * Enums
-
-## Methods/functions:
-* Goal of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) <= 10
-* Single responsibility - a method/function should only do one thing
-* Max # of arguments to method (dependency injection?)
 
 ## Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles:
 Initial | Stands for | Concept | Explanation
@@ -97,11 +105,5 @@ Use properties instead of public/protected member variables
 ## Packages
 * Use StructureMap as a dependency injection container
 * Use AutoMapper to decouple type conversions and minimize constructor parameters (will not need a constructor parameter for every property)
-
-Avoid using **this** in code unless it's necessary
-
-**private** modifier is no longer needed on fields/methods
-
-Use **nameof()** whenever possible
 
 Audit columns on all database tables
