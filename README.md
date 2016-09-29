@@ -37,7 +37,7 @@
 * Compile time checking
 * IntelliSense
 
-## Pascal casing
+## [Pascal casing](https://en.wikipedia.org/wiki/PascalCase)
 * Class names
 * Method names
 * Properties (do not prefix with "Get" or "Set")
@@ -45,7 +45,7 @@
 * Public member variables
 * Namespaces (separate logical components with periods)
 
-## Camel casing
+## [Camel casing](https://en.wikipedia.org/wiki/CamelCase)
 * Parameters
 * Local variables
 * Private member variables (also prefix with underscore)
@@ -58,12 +58,12 @@ http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-nami
   * Enums
 
 ## Methods/functions:
-* Goal of cyclomatic complexity <= 10
+* Goal of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) <= 10
 * Single responsibility - a method/function should only do one thing
 * Max # of arguments to method (dependency injection?)
 
 ## Source Control
-* Use Pandora-Jewelry VSTS (instead of PJNA)
+* Use [Pandora-Jewelry](https://pandora-jewelry.visualstudio.com/) VSTS (instead of PJNA)
 * Prefer Git over TFVC
   * Git Flow?
 
