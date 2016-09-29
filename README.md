@@ -1,4 +1,4 @@
-# C# Project Standards
+# **C# Project Standards**
 
 ## Project/repository standards
 * Do not prepend "Pandora" to class/namespace/assembly/package name unless it will be shared externally
@@ -12,7 +12,7 @@
 * Prefer Git over TFVC
   * Git Flow?
 
-# C# Coding Standards
+# **C# Coding Standards**
 
 ## Tabs vs spaces:
 * 4 (or 2?) spaces (don’t use tabs)
@@ -57,7 +57,7 @@ Avoid using **this** in code unless it's necessary
 
 Use **nameof()** whenever possible
 
-# Application Standards
+# **Application Standards**
 
 ## Minimum application guidelines:
 * Security
@@ -79,6 +79,14 @@ Use **nameof()** whenever possible
 * Compile time checking
 * Gives you IntelliSense
 
+## Architectural principles:
+* [Principle of Least Surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)
+* [K.I.S.S.](https://en.wikipedia.org/wiki/KISS_principle)
+* [You Ain't Gonna Need It](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
+* [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ([Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)))
+* [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) (principle of least knowledge)
+* SRP helps to encapsulate volatility (Juval Lowy/Udi Dahan)
+
 ## Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles:
 Initial | Stands for | Concept | Explanation
 ------- | ---------- | ------- | -----------
@@ -87,14 +95,6 @@ O |	OCP | [Open/closed principle](https://en.wikipedia.org/wiki/Open/closed_pri
 L | LSP | [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle) | “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.” See also [design by contract](https://en.wikipedia.org/wiki/Design_by_contract).
 I |	ISP | [Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle) | “many client-specific interfaces are better than one general-purpose interface.”
 D |	DIP | [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle) | one should “Depend upon Abstractions. Do not depend upon concretions.”
-
-## Architectural principles:
-* Principle of Least Surprise
-* K.I.S.S.
-* You Ain't Gonna Need It
-* Don't Repeat Yourself (Rule of Three)
-* [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) (principle of least knowledge)
-* SRP helps to encapsulate volatility (Juval Lowy/Udi Dahan)
 
 Use properties instead of public/protected member variables
 
