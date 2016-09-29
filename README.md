@@ -1,4 +1,18 @@
-# Pandora C# Coding Standards
+# C# Project Standards
+
+## Project/repository standards
+* Do not prepend "Pandora" to class/namespace/assembly/package name unless it will be shared externally
+  * Use the same standard for namespaces
+* Project folder(s) should be at the top level in a repository (no need for a \src folder)
+* No spaces in project names (to keep VSTS url simple)
+* Segregate tests in a separate folder (\tests)
+
+## Source Control
+* Use [Pandora-Jewelry](https://pandora-jewelry.visualstudio.com/) VSTS (instead of PJNA)
+* Prefer Git over TFVC
+  * Git Flow?
+
+# C# Coding Standards
 
 ## Tabs vs spaces:
 * 4 (or 2?) spaces
@@ -6,36 +20,9 @@
 
 ## Where to put the curly brace?
 * Always enclose blocks in curly braces (avoids scope confusion)
-* Put the opening brace on a new line (Allman style)
+* Put the opening brace on a new line ([Allman style](https://en.wikipedia.org/wiki/Indent_style#Allman_style))
 * Productivity Power Tools extension will show vertical lines
 * Viasfora extension will enable rainbow braces
-
-## Minimum application guidelines:
-* Security
-  * Authentication (login)
-    * Azure AD?
-    * SSO?
-  * Authorization (roles)
-* URLs (DNS)
-* Certificates
-* Force HTTPS on all routes (except login pages)
-	
-## Project/repository standards
-* Do not prepend "Pandora" to class/namespace/assembly/package name unless it will be shared externally
-  * Use the same standard for namespaces
-* Project folder(s) should be at the top level in a repository (no need for a \src folder)
-* No spaces in project names (to keep VSTS url simple)
-* Segregate tests in a separate folder (\tests)
-	
-## Data integrations:
-* Prefer push to target system to pull by target system
-* Use ServiceBus to reduce direct coupling
-* Target system is responsible for maintaining sync process
-
-## Prefer Typescript over plain javascript
-* Easier to refactor
-* Compile time checking
-* IntelliSense
 
 ## [Pascal casing](https://en.wikipedia.org/wiki/PascalCase)
 * Class names
@@ -50,6 +37,28 @@
 * Local variables
 * Private member variables (also prefix with underscore)
 
+# Application Standards
+
+## Minimum application guidelines:
+* Security
+  * Authentication (login)
+    * Azure AD?
+    * SSO?
+  * Authorization (roles)
+* URLs (DNS)
+* Certificates
+* Force HTTPS on all routes (except login pages)
+
+## Data integrations:
+* Prefer push to target system to pull by target system
+* Use ServiceBus to reduce direct coupling
+* Target system is responsible for maintaining sync process
+
+## Prefer Typescript over plain javascript
+* Easier to refactor
+* Compile time checking
+* Gives you IntelliSense
+
 http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/
 
 ## Max file size
@@ -61,11 +70,6 @@ http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-nami
 * Goal of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) <= 10
 * Single responsibility - a method/function should only do one thing
 * Max # of arguments to method (dependency injection?)
-
-## Source Control
-* Use [Pandora-Jewelry](https://pandora-jewelry.visualstudio.com/) VSTS (instead of PJNA)
-* Prefer Git over TFVC
-  * Git Flow?
 
 ## Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles:
 Initial | Stands for | Concept | Explanation
@@ -81,7 +85,7 @@ D |	DIP | [Dependency inversion principle](https://en.wikipedia.org/wiki/Depend
 * K.I.S.S.
 * You Ain't Gonna Need It
 * Don't Repeat Yourself (Rule of Three)
-* Law of Demeter (principle of least knowledge)
+* [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) (principle of least knowledge)
 * SRP helps to encapsulate volatility (Juval Lowy/Udi Dahan)
 
 Use properties instead of public/protected member variables
