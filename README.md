@@ -5,10 +5,10 @@
 * Don’t use tabs
 
 ## Where to put the curly brace?
-	• Always enclose blocks in curly braces (avoids scope confusion)
-	• Put the opening brace on a new line (Allman style)
-	• Productivity Power Tools extension will show vertical lines
-	• Viasfora extension will enable rainbow braces
+* Always enclose blocks in curly braces (avoids scope confusion)
+* Put the opening brace on a new line (Allman style)
+* Productivity Power Tools extension will show vertical lines
+* Viasfora extension will enable rainbow braces
 
 ## Minimum application guidelines:
 	• Security
@@ -28,27 +28,27 @@
 	• Segregate tests in a separate folder (\tests)
 	
 ## Data integrations:
-	• Prefer push to target system to pull by target system
-	• Use ServiceBus to reduce direct coupling
-	• Target system is responsible for maintaining sync process
+* Prefer push to target system to pull by target system
+* Use ServiceBus to reduce direct coupling
+* Target system is responsible for maintaining sync process
 
 ## Prefer Typescript over plain javascript
-	• Easier to refactor
-	• Compile time checking
-	• IntelliSense
+* Easier to refactor
+* Compile time checking
+* IntelliSense
 
 ## Pascal casing
-	• Class names
-	• Method names
-	• Properties (do not prefix with "Get" or "Set")
-	• Interface names (after initial "I")
-	• Public member variables
-	• Namespaces (separate logical components with periods)
+* Class names
+* Method names
+* Properties (do not prefix with "Get" or "Set")
+* Interface names (after initial "I")
+* Public member variables
+* Namespaces (separate logical components with periods)
 
 ## Camel casing
-	• Parameters
-	• Local variables
-	• Private member variables (also prefix with underscore)
+* Parameters
+* Local variables
+* Private member variables (also prefix with underscore)
 
 http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/
 
@@ -68,7 +68,7 @@ http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-nami
 ## Prefer Git over TFVC
 	• Git Flow?
 
-## Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles
+## Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles:
 Initial | Stands for | Concept | Explanation
 ------- | ---------- | ------- | -----------
 S | SRP | [Single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) | a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class)
