@@ -1,1 +1,1 @@
-# CodingStandards
+# Coding Standards
