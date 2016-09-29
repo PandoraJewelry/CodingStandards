@@ -1,4 +1,4 @@
-# Pandora Coding Standards
+# Pandora C# Coding Standards
 
 ## Tabs vs spaces:
 * 4 (or 2?) spaces
@@ -11,21 +11,21 @@
 * Viasfora extension will enable rainbow braces
 
 ## Minimum application guidelines:
-	• Security
-		○ Authentication (login)
-			§ Azure AD?
-			§ SSO?
-		○ Authorization (roles)
-	• URLs (DNS)
-	• Certificates
-	• Force HTTPS on all routes (except login pages)
+* Security
+  * Authentication (login)
+    * Azure AD?
+    * SSO?
+  * Authorization (roles)
+* URLs (DNS)
+* Certificates
+* Force HTTPS on all routes (except login pages)
 	
 ## Project/repository standards
-	• Do not prepend "Pandora" to class/namespace/assembly/package name unless it will be shared externally
-		○ Use the same standard for namespaces
-	• Project folder(s) should be at the top level in a repository (no need for a \src folder)
-	• No spaces in project names (to keep VSTS url simple)
-	• Segregate tests in a separate folder (\tests)
+* Do not prepend "Pandora" to class/namespace/assembly/package name unless it will be shared externally
+  * Use the same standard for namespaces
+* Project folder(s) should be at the top level in a repository (no need for a \src folder)
+* No spaces in project names (to keep VSTS url simple)
+* Segregate tests in a separate folder (\tests)
 	
 ## Data integrations:
 * Prefer push to target system to pull by target system
@@ -53,20 +53,19 @@
 http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/
 
 ## Max file size
-	• One class per file
-	• Exceptions:
-		○ Enums
+* One class per file
+* Exceptions:
+  * Enums
 
 ## Methods/functions:
-	• Goal of cyclomatic complexity <= 10
-	• Single responsibility - a method/function should only do one thing
-	• Max # of arguments to method (dependency injection?)
+* Goal of cyclomatic complexity <= 10
+* Single responsibility - a method/function should only do one thing
+* Max # of arguments to method (dependency injection?)
 
-## VSTS
-	• Pandora-Jewelry (instead of PJNA)
-
-## Prefer Git over TFVC
-	• Git Flow?
+## Source Control
+* Use Pandora-Jewelry VSTS (instead of PJNA)
+* Prefer Git over TFVC
+  * Git Flow?
 
 ## Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles:
 Initial | Stands for | Concept | Explanation
@@ -78,22 +77,22 @@ I |	ISP | [Interface segregation principle](https://en.wikipedia.org/wiki/Inter
 D |	DIP | [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle) | one should “Depend upon Abstractions. Do not depend upon concretions.”
 
 ## Architectural principles:
-	• Principle of Least Surprise
-	• K.I.S.S.
-	• You Ain't Gonna Need It
-	• Don't Repeat Yourself (Rule of Three)
-	• Law of Demeter (principle of least knowledge)
-	• SRP helps to encapsulate volatility (Juval Lowy/Udi Dahan)
+* Principle of Least Surprise
+* K.I.S.S.
+* You Ain't Gonna Need It
+* Don't Repeat Yourself (Rule of Three)
+* Law of Demeter (principle of least knowledge)
+* SRP helps to encapsulate volatility (Juval Lowy/Udi Dahan)
 
 Use properties instead of public/protected member variables
 
 ## Return empty string or collection from a function instead of null
-	• Eliminates the need for null checks
-	• Prevents null reference errors
+* Eliminates the need for null checks
+* Prevents null reference errors
 
 ## Packages
-	• Use StructureMap as a dependency injection container
-	• Use AutoMapper to decouple type conversions and minimize constructor parameters (will not need a constructor parameter for every property)
+* Use StructureMap as a dependency injection container
+* Use AutoMapper to decouple type conversions and minimize constructor parameters (will not need a constructor parameter for every property)
 
 Avoid using **this** in code unless it's necessary
 
