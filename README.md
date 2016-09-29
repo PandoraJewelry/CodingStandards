@@ -19,11 +19,33 @@
 
 ## Where to put the curly brace?
 * Always enclose blocks in curly braces (avoids scope confusion)
+
+Not
+```
+    if (<condition>)
+        statement(s)
+```
+or
+```
+    if (<condition>) statement(s)
+```
 * Put the opening brace on a new line ([Allman style](https://en.wikipedia.org/wiki/Indent_style#Allman_style))
-* [Productivity Power Tools](https://visualstudiogallery.msdn.microsoft.com/34ebc6a2-2777-421d-8914-e29c1dfa7f5d) extension will show vertical lines
+```
+    if (<condition>)
+    {
+        statement(s)
+    }
+```
+instead of
+```
+    if (<condition>) {
+        statement(s)
+    }
+```
+* [Productivity Power Tools](https://visualstudiogallery.msdn.microsoft.com/34ebc6a2-2777-421d-8914-e29c1dfa7f5d) extension will show matching vertical lines
 * [Viasfora](https://visualstudiogallery.msdn.microsoft.com/19609469-380e-4fcf-bcde-e31caeb658b2) extension will enable rainbow braces
 
-## [Pascal casing](https://en.wikipedia.org/wiki/PascalCase)
+## Use [Pascal casing](https://en.wikipedia.org/wiki/PascalCase) for
 * Class names
 * Method names
 * Properties (do not prefix with "Get" or "Set")
@@ -34,22 +56,26 @@
 * Public member variables
 * Namespaces (separate logical components with periods)
 
-## [Camel casing](https://en.wikipedia.org/wiki/CamelCase)
+## Use [Camel casing](https://en.wikipedia.org/wiki/CamelCase) for
 * Parameters
 * Local variables
 * Private member variables (also prefix with underscore)
 
 http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/
 
-## Max file size
+## Code file conventions:
 * One class per file
 * Exceptions:
   * Enums
 
 ## Methods/functions:
 * Goal of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) <= 10
-* Single responsibility - a method/function should only do one thing
+* [Single responsibility](https://github.com/PandoraJewelry/CodingStandards#follow-solid-principles) - a method/function should only do one thing
 * Max # of arguments to method (dependency injection?)
+
+## Return empty string or collection from a function instead of null
+* Eliminates the need for null checks
+* Prevents null reference errors
 
 Avoid using **this** in code unless it's necessary
 
@@ -77,7 +103,7 @@ Use **nameof()** whenever possible
 ## Prefer Typescript over plain javascript
 * Easier to refactor
 * Compile time checking
-* Gives you IntelliSense
+* Provides IntelliSense
 
 ## Architectural principles:
 * [Principle of Least Surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)
@@ -97,10 +123,6 @@ I |	ISP | [Interface segregation principle](https://en.wikipedia.org/wiki/Inter
 D |	DIP | [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle) | one should “Depend upon Abstractions. Do not depend upon concretions.”
 
 Use properties instead of public/protected member variables
-
-## Return empty string or collection from a function instead of null
-* Eliminates the need for null checks
-* Prevents null reference errors
 
 ## Packages
 * Use StructureMap as a dependency injection container
