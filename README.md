@@ -72,7 +72,7 @@ http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-nami
 
 ## Methods/functions:
 * Goal of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) <= 10
-* [Single responsibility](#follow-solid-principles) - a method/function should only do one thing
+* [Single responsibility](#solid) - a method/function should only do one thing
 * Max # of arguments to method (dependency injection?)
 
 ## Return empty string or collection from a function instead of null
@@ -115,7 +115,7 @@ Use **nameof()** whenever possible
 * [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) (principle of least knowledge)
 * SRP helps to encapsulate volatility (Juval Lowy/Udi Dahan)
 
-## Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles:
+## <a name="solid"></a>Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles:
 Initial | Stands for | Concept | Explanation
 ------- | ---------- | ------- | -----------
 S | SRP | [Single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) | a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class)
