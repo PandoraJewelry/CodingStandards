@@ -1,4 +1,4 @@
-# Coding Standards
+# Pandora Coding Standards
 
 ## Tabs vs spaces:
 * 4 (or 2?) spaces
@@ -68,18 +68,14 @@ http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-nami
 ## Prefer Git over TFVC
 	• Git Flow?
 
-## Follow SOLID principles
-Initial	Stands for	Concept
-S	SRP [4]	        Single responsibility principle
-		        a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class)
-O	OCP [5]	        Open/closed principle
-		        “software entities … should be open for extension, but closed for modification.”
-L	LSP [6]	        Liskov substitution principle
-		        “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.” See also design by contract.
-I	ISP [7]	        Interface segregation principle
-		        “many client-specific interfaces are better than one general-purpose interface.”[8]
-D	DIP [9]	        Dependency inversion principle
-		        one should “Depend upon Abstractions. Do not depend upon concretions.”[8]
+## Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles
+Initial | Stands for | Concept | Explanation
+------- | ---------- | ------- | -----------
+S | SRP [4]	| Single responsibility principle | a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class)
+O |	OCP [5]	| Open/closed principle | “software entities … should be open for extension, but closed for modification.”
+L | LSP [6]	| Liskov substitution principle | “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.” See also design by contract.
+I |	ISP [7] | Interface segregation principle | “many client-specific interfaces are better than one general-purpose interface.”[8]
+D |	DIP [9]	| Dependency inversion principle | one should “Depend upon Abstractions. Do not depend upon concretions.”[8]
 
 ## Architectural principles:
 	• Principle of Least Surprise
@@ -99,10 +95,10 @@ Use properties instead of public/protected member variables
 	• Use StructureMap as a dependency injection container
 	• Use AutoMapper to decouple type conversions and minimize constructor parameters (will not need a constructor parameter for every property)
 
-Avoid using this in code unless it's necessary
+Avoid using **this** in code unless it's necessary
 
-private is no longer needed on fields/methods
+**private** modifier is no longer needed on fields/methods
 
-Use nameof() whenever possible
+Use **nameof()** whenever possible
 
 Audit columns on all database tables
