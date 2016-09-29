@@ -6,6 +6,7 @@
 * Project folder(s) should be at the top level in a repository (no need for a \src folder)
 * No spaces in project names (to keep VSTS url simple)
 * Segregate tests in a separate folder (\tests)
+  * *you did create a test project, didn't you?* 
 * Prefer NuGet references to direct project references
 
 ## Source Control
@@ -90,6 +91,15 @@ Avoid using **this** in code unless it's necessary
 
 Use **nameof()** whenever possible
 
+Use properties instead of public/protected member variables
+```
+    public string MyLittleProperty { get; set; }
+```
+instead of
+```
+    public string MyLittleProperty;
+```
+
 # **Application Standards**
 
 ## Minimum application guidelines:
@@ -98,7 +108,7 @@ Use **nameof()** whenever possible
     * Azure AD?
     * SSO?
     * OAuth?
-  * Authorization (roles)
+  * Authorization (roles/permissions)
     * Claims based?
   * Do not check in username/password in config file (or XML transform file)
     * Set in Azure application settings (what about KeyVault?)
@@ -109,12 +119,15 @@ Use **nameof()** whenever possible
 ## Data integrations:
 * Prefer push to target system to pull by target system
 * Use ServiceBus to reduce direct coupling
-* Target system is responsible for maintaining sync process
+* Target system is responsible for maintaining sync process (if pull is used)
 
 ## Prefer Typescript over plain javascript
 * Easier to refactor
 * Compile time checking
 * Provides IntelliSense
+
+## Logging
+* ???
 
 ## Architectural principles:
 * [Principle of Least Surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)
@@ -133,19 +146,12 @@ L | LSP | [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_
 I |	ISP | [Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle) | “many client-specific interfaces are better than one general-purpose interface.”
 D |	DIP | [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle) | one should “Depend upon Abstractions. Do not depend upon concretions.”
 
-Use properties instead of public/protected member variables
-```
-    public string MyLittleProperty { get; set; }
-```
-instead of
-```
-    public string MyLittleProperty;
-```
-
 ## Packages
 * Use [StructureMap](https://www.nuget.org/packages/StructureMap/) as a dependency injection container
 * Use [AutoMapper](https://www.nuget.org/packages/AutoMapper/) to decouple type conversions and minimize constructor parameters (will not need a constructor parameter for every property)
 * Use [Entity Framework](https://www.nuget.org/packages/EntityFramework/) as an ORM
   * When should we switch to EF Core?
+
+# **Database Standards**
 
 Audit columns on all database tables
