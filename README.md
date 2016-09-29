@@ -71,11 +71,11 @@ http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-nami
 ## Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles
 Initial | Stands for | Concept | Explanation
 ------- | ---------- | ------- | -----------
-S | SRP [4]	| Single responsibility principle | a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class)
-O |	OCP [5]	| Open/closed principle | “software entities … should be open for extension, but closed for modification.”
-L | LSP [6]	| Liskov substitution principle | “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.” See also design by contract.
-I |	ISP [7] | Interface segregation principle | “many client-specific interfaces are better than one general-purpose interface.”[8]
-D |	DIP [9]	| Dependency inversion principle | one should “Depend upon Abstractions. Do not depend upon concretions.”[8]
+S | SRP | [Single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) | a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class)
+O |	OCP | [Open/closed principle](https://en.wikipedia.org/wiki/Open/closed_principle) | “software entities … should be open for extension, but closed for modification.”
+L | LSP | [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle) | “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.” See also [design by contract](https://en.wikipedia.org/wiki/Design_by_contract).
+I |	ISP | [Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle) | “many client-specific interfaces are better than one general-purpose interface.”
+D |	DIP | [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle) | one should “Depend upon Abstractions. Do not depend upon concretions.”
 
 ## Architectural principles:
 	• Principle of Least Surprise
