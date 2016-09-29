@@ -30,6 +30,8 @@ or
     if (<condition>) statement(s)
 ```
 * Put the opening brace on a new line ([Allman style](https://en.wikipedia.org/wiki/Indent_style#Allman_style))
+
+Use
 ```
     if (<condition>)
     {
@@ -70,7 +72,7 @@ http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-nami
 
 ## Methods/functions:
 * Goal of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) <= 10
-* [Single responsibility](https://github.com/PandoraJewelry/CodingStandards#follow-solid-principles) - a method/function should only do one thing
+* [Single responsibility](#follow-solid-principles) - a method/function should only do one thing
 * Max # of arguments to method (dependency injection?)
 
 ## Return empty string or collection from a function instead of null
