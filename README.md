@@ -53,6 +53,9 @@ Exception for auto implemented properties:
 * [Productivity Power Tools](https://visualstudiogallery.msdn.microsoft.com/34ebc6a2-2777-421d-8914-e29c1dfa7f5d) extension will show matching vertical lines
 * [Viasfora](https://visualstudiogallery.msdn.microsoft.com/19609469-380e-4fcf-bcde-e31caeb658b2) extension will enable rainbow braces
 
+  ![alt text](https://github.com/PandoraJewelry/CodingStandards/blob/master/images/rainbowbraces.png "Rainbow Braces")
+
+
 ## Use [Pascal casing](https://en.wikipedia.org/wiki/PascalCase) for
 * Class names
 * Method names
