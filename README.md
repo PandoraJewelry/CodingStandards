@@ -121,12 +121,13 @@ instead of
 * Use ServiceBus to reduce direct coupling
 * Target system is responsible for maintaining sync process (if pull is used)
 
-## Prefer Typescript over plain javascript
-* Easier to refactor
-* Compile time checking
-* Provides IntelliSense
+## Javascript: 
+* Prefer Typescript over plain javascript
+  * Easier to refactor
+  * Compile time checking
+  * Provides IntelliSense
 
-## Logging
+## Logging:
 * ???
 
 ## Architectural principles:
@@ -135,7 +136,9 @@ instead of
 * [You Ain't Gonna Need It](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
 * [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ([Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)))
 * [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) (principle of least knowledge)
-* SRP helps to encapsulate volatility (Juval Lowy/Udi Dahan)
+* SRP helps to encapsulate volatility
+  * Juval Lowy on [Volatility-based Decomposition](https://www.youtube.com/watch?v=VIC7QW62-Tw)
+  * Udi Dahan on [service boundaries](http://udidahan.com/2012/06/23/ui-composition-techniques-for-correct-service-boundaries/)
 
 ## <a name="solid"></a>Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles:
 Initial | Stands for | Concept | Explanation
