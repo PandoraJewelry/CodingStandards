@@ -1,7 +1,7 @@
 # **C# Project Standards**
 
 ## Project/repository standards
-* Do not prepend "Pandora" to class/namespace/assembly/package name unless it will be shared externally
+* Do not prepend *"Pandora"* to class/namespace/assembly/package name unless it will be shared externally
   * Use the same standard for namespaces
 * Project folder(s) should be at the top level in a repository (no need for a \src folder)
 * No spaces in project names (to keep VSTS url simple)
@@ -17,39 +17,40 @@
 # **C# Coding Standards**
 
 ## Tabs vs spaces:
-* 4 (or 2?) spaces (don’t use tabs)
+* 4 spaces (does anybody prefer 2?)
+* **don’t use tabs, never ever ever**
 
 ## Where to put the curly brace?
 * Always enclose blocks in curly braces (avoids scope confusion)
 
-Not
-```
+  Not
+  ```
     if (<condition>)
         statement(s)
-```
-or
-```
+  ```
+  or
+  ```
     if (<condition>) statement(s)
-```
+  ```
 * Put the opening brace on a new line ([Allman style](https://en.wikipedia.org/wiki/Indent_style#Allman_style))
 
-Use
-```
+  Use
+  ```
     if (<condition>)
     {
         statement(s)
     }
-```
-instead of
-```
+  ```
+  instead of
+  ```
     if (<condition>) {
         statement(s)
     }
-```
-Exception for auto implemented properties: 
-```
+  ```
+* Exception for auto implemented properties: 
+  ```
     public string MyLittleProperty { get; set; }
-```
+  ```
 * [Productivity Power Tools](https://visualstudiogallery.msdn.microsoft.com/34ebc6a2-2777-421d-8914-e29c1dfa7f5d) extension will show  structure matching vertical lines
 
   ![alt text](https://github.com/PandoraJewelry/CodingStandards/blob/master/images/structurematching.png "Structure matching")
@@ -63,9 +64,9 @@ Exception for auto implemented properties:
 * Method names
 * Properties (do not prefix with "Get" or "Set")
 * Interface names (after initial "I")
-```
+  ```
     IThisIsVeryUseful instead of IthisIsVeryUseful  
-```
+  ```
 * Public member variables
 * Namespaces (separate logical components with periods)
 
@@ -74,15 +75,15 @@ Exception for auto implemented properties:
 * Local variables
 * Private member variables (also prefix with underscore)
 
-[Reference](http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/)
-
 ## Code file conventions:
 * One class per file
 * Exceptions:
   * Enums
 
 ## Methods/functions:
-* Goal of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) <= 10
+* Goal of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) <= 10 (on a per method basis)
+  * [Code Metrics Powertool (Microsoft)](https://www.microsoft.com/en-us/download/details.aspx?id=48213)
+  * [Alternative Code Metrics viewer plug in](https://visualstudiogallery.msdn.microsoft.com/ee46c9de-0890-4447-910d-d2b708de71bf)
 * [Single responsibility](#solid) - a method/function should only do one thing
 * Max # of arguments to method (dependency injection?)
 
@@ -131,9 +132,13 @@ instead of
   * Easier to refactor
   * Compile time checking
   * Provides IntelliSense
+* Linter?
 
 ## Logging:
-* ???
+* Common.Logging?
+* log4net?
+* NLog?
+* ETW?
 
 ## Architectural principles:
 * [Principle of Least Surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)
@@ -147,7 +152,7 @@ instead of
 
 ## <a name="solid"></a>Follow [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles:
 Initial | Stands for | Concept | Explanation
-------- | ---------- | ------- | -----------
+--- | --- | --- | ---
 S | SRP | [Single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) | a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class)
 O |	OCP | [Open/closed principle](https://en.wikipedia.org/wiki/Open/closed_principle) | “software entities … should be open for extension, but closed for modification.”
 L | LSP | [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle) | “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.” See also [design by contract](https://en.wikipedia.org/wiki/Design_by_contract).
@@ -163,3 +168,19 @@ D |	DIP | [Dependency inversion principle](https://en.wikipedia.org/wiki/Depend
 # **Database Standards**
 
 Audit columns on all database tables
+
+# **References**
+
+<a name="reference1"></a>[C# Coding Standards And Naming Conventions](http://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/)
+
+<a name="reference2"></a>[Microsoft C# Coding Conventions](https://msdn.microsoft.com/en-us/library/ff926074.aspx)
+
+<a name="reference3"></a>[.Net CoreFX C# Coding Style](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/coding-style.md)
+
+<a name="reference4"></a>[.Net C# Coding Standards](https://dotnet.github.io/docfx/guideline/csharp_coding_standards.html)
+
+<a name="reference5"></a>[Unreal Engine Coding Standards](https://docs.unrealengine.com/latest/INT/Programming/Development/CodingStandard/)
+
+<a name="reference6"></a>[Aviva Solutions C# Coding Guidelines](http://csharpguidelines.codeplex.com/)
+
+<a name="reference7"></a>[Source code reformatting tool](https://github.com/dotnet/codeformatter)
