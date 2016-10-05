@@ -58,6 +58,20 @@
 
   ![alt text](https://github.com/PandoraJewelry/CodingStandards/blob/master/images/rainbowbraces.png "Rainbow Braces")
 
+## LINQ
+* Prefer fluent syntax (dot separated) to query syntax (SQL like)
+
+  Use
+  ```
+    Items.Where(x => x.BaseItemNumber.StartsWith("150100")).ToList();
+  ```
+  instead of
+  ```
+    from i in Items
+	    where i.BaseItemNumber.StartsWith("150100")
+	    select i;
+  ```
+* Use deferred execution operators before immediate execution operators whenever possible ([Standard Query Operators](https://msdn.microsoft.com/en-us/library/mt693095.aspx)) 
 
 ## Use [Pascal casing](https://en.wikipedia.org/wiki/PascalCase) for
 * Class names
