@@ -105,20 +105,19 @@
 * Eliminates the need for null checks
 * Prevents null reference errors
 
-Avoid using **this** in code unless it's necessary
+## Miscellaneous
+* Avoid using **this** in code unless it's necessary
+* **private** modifier is no longer needed on fields/methods
+* Use **nameof()** whenever possible
+* Use properties instead of public/protected member variables (a property provides a layer of abstraction over a field (which is an implementation detail))
 
-**private** modifier is no longer needed on fields/methods
-
-Use **nameof()** whenever possible
-
-Use properties instead of public/protected member variables
-```
-    public string MyLittleProperty { get; set; }
-```
-instead of
-```
-    public string MyLittleProperty;
-```
+  ```
+      public string MyLittleProperty { get; set; }
+  ```
+  instead of
+  ```
+      public string MyLittleProperty;
+  ```
 
 # **Application Standards**
 
