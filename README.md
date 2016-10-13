@@ -101,9 +101,11 @@
 * [Single responsibility](#solid) - a method/function should only do one thing
 * Max # of arguments to method (dependency injection?)
 
-## Return empty string or collection from a function instead of null
-* Eliminates the need for null checks
-* Prevents null reference errors
+## Return null from a function only when appropriate.
+* Null means unknown.
+* Prevents null reference errors.
+* Prefer an empty collection over a null so that the collection can be iterated over immediately without a null check.
+* Prefer throwing a meaningful exception over returning null if you don't know what to do.
 
 ## Miscellaneous
 * Avoid using **this** in code unless it's necessary
