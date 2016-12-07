@@ -150,10 +150,11 @@
 * Linter?
 
 ## Logging:
-* Common.Logging?
-* log4net?
-* NLog?
-* ETW?
+* [Common.Logging?](http://net-commons.github.io/common-logging/)
+* [log4net?](http://logging.apache.org/log4net/)
+* [NLog?](http://nlog-project.org/)
+* [ETW?](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803(v=vs.85).aspx)
+* [Serilog?](https://serilog.net/)
 
 ## Architectural principles:
 * [Principle of Least Surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)
