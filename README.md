@@ -10,8 +10,8 @@
 * Prefer NuGet references to direct project references
 
 ## Source Control
-* Use [Pandora-Jewelry](https://pandora-jewelry.visualstudio.com/) VSTS (instead of PJNA)
-* Prefer Git over TFVC
+* Use [Pandora-Jewelry](https://pandora-jewelry.visualstudio.com/) VSTS instance (instead of [PJNA](https://pjna.visualstudio.com/))
+* Prefer Git repositories over TFVC
   * Git Flow?
 
 # **C# Coding Standards**
